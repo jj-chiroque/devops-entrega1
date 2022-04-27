@@ -1,0 +1,11 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - pip install -r requirements.txt
+      - pip install pytest
+      - python -m unittest tests/test_blacklist.py
+artifacts:
+  files:
+    - '**/*'
